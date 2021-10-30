@@ -1,0 +1,31 @@
+// Program to find prime factors of a given number
+#include <iostream>
+using namespace std;
+int main()
+{
+  	int i, j, Number, isPrime; 
+   
+    cout<<"Enter the number\n";
+  	cin>>Number;
+ 
+  	for (i = 2; i <= Number; i++)
+   	{
+     	if(Number % i == 0)
+        {
+   			isPrime = 1;
+			for (j = 2; j <= i/2; j++)
+			{
+				if(i % j == 0)
+				{
+					isPrime = 0;
+					break;
+				}
+			} 
+			if(isPrime == 1)
+			{
+				cout<<i<<" is a prime factor";
+			}	          	
+		}
+   }
+  	return 0;
+}
